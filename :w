@@ -14,16 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <InputSection
-        iI={initI}
-        siI={setInitI}
-        aI={annualI}
-        saI={setAnnualI}
-        eR={exceR}
-        seR={setExceR}
-        D={duration}
-        sD={setDuration}
-      />
+      <InputSection />
       <OutputSection />
     </>
   );
