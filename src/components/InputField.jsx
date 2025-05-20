@@ -2,8 +2,8 @@ import React from "react";
 
 function InputField({ value, setValue, name }) {
   return (
-    <div className="flex flex-col m-10">
-      <label for={name}>
+    <div className="flex flex-1 flex-col m-4">
+      <label className="m-3" for={name}>
         {name}
         {" :"}
       </label>
