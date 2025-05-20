@@ -13,6 +13,7 @@ function App() {
 
   return (
     <>
+      <h1>{initI}</h1>
       <Header />
       <InputSection
         iI={initI}
