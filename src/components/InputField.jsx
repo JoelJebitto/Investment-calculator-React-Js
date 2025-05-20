@@ -12,7 +12,7 @@ function InputField({ value, setValue, name }) {
         type="number"
         name={name}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => setValue(parseInt(e.target.value))}
       />
     </div>
   );

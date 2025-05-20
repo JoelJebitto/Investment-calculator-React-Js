@@ -4,12 +4,18 @@ import Header from "./sections/Header.jsx";
 import OutputSection from "./sections/OutputSection.jsx";
 import InputSection from "./sections/InputSection.jsx";
 import { useState } from "react";
+import { calculateInvestmentResults } from "./util/investment.js";
+import { useEffect } from "react";
 
 function App() {
   const [initI, setInitI] = useState(0);
   const [annualI, setAnnualI] = useState(0);
   const [exceR, setExceR] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(calculateInvestmentResults(initI, annualI, exceR, duration));
+  }, [initI, annualI, exceR, duration]);
 
   return (
     <>
@@ -25,7 +31,7 @@ function App() {
         D={duration}
         sD={setDuration}
       />
-      <OutputSection />
+      <OutputSection data={data} i={initI} />
     </>
   );
 }
